@@ -11,6 +11,8 @@ dtbo-y += samsung/exynos9611-gta4xl_eur_open_05.dtbo
 dtbo-y += samsung/exynos9611-gta4xl_eur_open_01.dtbo
 dtbo-y += samsung/exynos9611-gta4xl_eur_open_09.dtbo
 dtbo-y += samsung/exynos9611-gta4xl_eur_open_03.dtbo
+dtbo-y += samsung/exynos9611-m21_swa_open_06.dtbo
+dtbo-y += samsung/exynos9611-m21_swa_open_00.dtbo
 
 targets += dtbs
 DTB_LIST  := $(dtb-y) $(dtbo-y)
