@@ -44,7 +44,13 @@ jobs:
           echo ''
           echo ''
           cat .config
-
+          
+      - name: Upload kernel
+        uses: actions/upload-artifact@v4
+        with:
+          name: N_kernel-${{matrix.device}}_Clang_18
+          path: AIK/N_KERNEL.*.zip
+          
       - name: Upload to Telegram
         uses: appleboy/telegram-action@master
         with:
@@ -52,9 +58,3 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           document: AIK/N_KERNEL*.zip
           message: "Dragonfox Kernel Build Completed"
-
-      - name: Upload kernel
-        uses: actions/upload-artifact@v4
-        with:
-          name: N_kernel-${{matrix.device}}_Clang_18
-          path: AIK/N_KERNEL.*.zip
