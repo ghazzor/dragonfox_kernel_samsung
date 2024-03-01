@@ -36,8 +36,8 @@ LLVM=1
 
 make clean && make distclean
 clear
-make ${ARGS} KCFLAGS=-w CONFIG_SECTION_MISMATCH_WARN_ONLY=y ${DEVICE}_defconfig
-make ${ARGS} KCFLAGS=-w CONFIG_SECTION_MISMATCH_WARN_ONLY=y -j$(nproc)
+make ${ARGS} LLVM_IAS=0 KCFLAGS=-w CONFIG_SECTION_MISMATCH_WARN_ONLY=y ${DEVICE}_defconfig
+make ${ARGS} LLVM_IAS=0 KCFLAGS=-w CONFIG_SECTION_MISMATCH_WARN_ONLY=y -j$(nproc)
 
 echo "Cleaning Stuff"
 rm -rf AIK/Image
