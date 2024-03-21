@@ -1012,6 +1012,7 @@ LDFLAGS_vmlinux += --build-id
 
 ifdef CONFIG_LD_DEAD_CODE_DATA_ELIMINATION
 LDFLAGS_vmlinux	+= $(call ld-option, --gc-sections,)
+LDFLAGS_vmlinux += -z nostart-stop-gc
 endif
 
 LDFLAGS	+= -z noexecstack
